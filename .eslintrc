@@ -7,7 +7,15 @@
 
   // 添加全局函数和对象
   "globals": {
-    "localStorage": true
+    "localStorage": true,
+    "window": true,
+    "navigator":true,
+    "location":true,
+    "document":true,
+    "__DEV__": false,
+    "__TEST__": false,
+    "__PROD__": false,
+    "__COVERAGE__": false
   },
 
   /**
@@ -38,7 +46,13 @@
     // 关闭规则，允许不验证组件属性
     "react/prop-types": 0,
 
+    // 关闭规则，允许使用object，any，array类型的属性验证
+    "react/forbid-prop-types": 0,
+
     // 关闭规则，忽略行结尾符
-    "linebreak-style": 0
+    "linebreak-style": 0,
+
+    // 允许对函数的参数属性修改和赋值
+    "no-param-reassign": [2,  { "props": false }]
   }
 }

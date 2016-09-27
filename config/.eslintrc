@@ -1,13 +1,6 @@
 {
   "extends" : "../.eslintrc",
-  "env"     : {
-    "mocha" : true
-  },
-  "globals" : {
-    "expect" : false,
-    "should" : false,
-    "sinon"  : false
-  },
+
   /**
  * "off" 或 0 - 关闭规则
  * "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出),
@@ -17,13 +10,7 @@
     // 关闭规则，允許使用的包不放在dependencies中
     "import/no-extraneous-dependencies": 0,
 
-    // 关闭规则，允許使用純表達式
-    "no-unused-expressions": 0,
-
-    // 关闭规则，允許import時不指明擴展名
-    "import/extensions": 0,
-
-    // 关闭规则，允許import時不指明擴展名
-    "import/no-unresolved": 0
+    // 关闭规则，允许变量名使用下划线
+    "no-underscore-dangle": 0
   }
 }
